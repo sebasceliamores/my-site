@@ -1,0 +1,90 @@
+<header class="header center">
+	<h3>
+		<a href="https://rajshekhar26.github.io/cleanfolio-minimal" class="link">ISCA</a>
+	</h3>
+
+	<nav class="nav center">
+    
+		<ul class="nav__list center">
+			<li class="nav__list-item">
+				<a class="link link--nav" href="#projects">Projects</a>
+			</li>
+			<li class="nav__list-item">
+				<a class="link link--nav" href="#skills">Skills</a>
+			</li>
+			<li class="nav__list-item">
+				<a class="link link--nav" href="#contact">Contact</a>
+			</li>
+		</ul>
+
+		<button type="button" aria-label="toggle theme" class="btn btn--icon">
+			<i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+		</button>
+
+		<button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+			<i aria-hidden="true" class="fas fa-bars"></i>
+		</button>
+	</nav>
+</header>
+
+<style>
+	.header {
+		height: 8em;
+		max-width: 1100px;
+		width: 95%;
+		margin: 0 auto;
+		justify-content: space-between;
+	}
+
+	.nav__list {
+		margin-right: 1.5em;
+		display: flex;
+	}
+
+	.nav__list-item {
+		margin-left: 1.5em;
+	}
+
+	.nav__hamburger {
+		display: none;
+		width: 1em;
+	}
+
+	.link--nav {
+		color: var(--clr-fg);
+		text-transform: lowercase;
+		font-weight: 500;
+	}
+
+	@media (max-width: 600px) {
+		.header {
+			height: 6em;
+		}
+
+		.nav__list {
+			flex-direction: column;
+			padding: 4em 0;
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 5em;
+			background-color: var(--clr-bg);
+			width: 0;
+			overflow: hidden;
+			transition: width 0.2s ease-in-out;
+		}
+
+		.display-nav-list {
+			width: 100%;
+		}
+
+		.nav__list-item {
+			margin: 0.5em 0;
+		}
+
+		.nav__hamburger {
+			display: flex;
+			margin-left: 0.8em;
+		}
+	}
+</style>
